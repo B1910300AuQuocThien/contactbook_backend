@@ -5,8 +5,6 @@ const { ObjectId } = require("mongodb");
 
 exports.create = async (req, res, next) => {
     if (!req.body?.name) {
-        // console.log(req.body?.name);
-        // console.log(new ContactService(MongoDB.client));
         return next(new ApiError(400, "Name can not be empty"));
     }
     try {

@@ -71,7 +71,7 @@ class ContactService {
     }
 
     async findFavorite() {
-        return await this.find({ favorite: "true" });
+        return await this.find({ favorite: true });
     }
 
     async deleteAll() {
